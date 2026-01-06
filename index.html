@@ -6,8 +6,8 @@
     
     <!-- SEO 优化 -->
     <title>All about Ulala - 犬と暮らす、考えるノート</title>
-    <meta name="description" content="犬のulalaとの暮らしを通じて、動物と人の関係について深く考えるブログ。日常の気づきから、共生の意味、愛と責任について綴ります。デリダの款待、他者との関係など、哲学的な問いをやさしい言葉で探求します。">
-    <meta name="keywords" content="犬,ペット,動物と人,関係性,共生,哲学,デリダ,款待,愛,責任,思考,ulala,ブログ,エッセイ">
+    <meta name="description" content="犬のulalaとの暮らしを通じて、動物と人の関係について深く考えるブログ。ペットは私たちに何をもたらしてくれたのか？本来、完全なる他者だった彼らが、私たち自身の在り方を映し出し、私たちが何者かを教えてくれています。">
+    <meta name="keywords" content="犬,ペット,動物と人,関係性,共生,哲学,デリダ,款待,愛,責任,思考,ulala,ブログ,エッセイ,星の王子さま">
     <meta http-equiv="content-language" content="ja">
 
     <!-- Open Graph (SNS分享) -->
@@ -125,7 +125,7 @@
         .hero-message .lead {
             font-size: 18px;
             line-height: 1.9;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: var(--dark);
             font-family: var(--font-serif);
         }
@@ -134,6 +134,7 @@
             font-size: 16px;
             line-height: 1.8;
             color: var(--gray-dark);
+            margin-bottom: 20px;
         }
 
         .cta-button {
@@ -198,6 +199,41 @@
             margin: 0 auto;
             color: var(--gray-dark);
             font-size: 16px;
+        }
+
+        /* 引用区域 - 使用About预览的样式 */
+        .quote-preview {
+            background-color: var(--primary-light);
+            padding: 50px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-preview blockquote {
+            font-family: var(--font-serif);
+            font-size: 16px;
+            line-height: 1.9;
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+        }
+
+        .quote-preview blockquote p {
+            margin-bottom: 20px;
+        }
+
+        .quote-preview blockquote p:last-of-type {
+            margin-bottom: 25px;
+        }
+
+        .quote-preview cite {
+            display: block;
+            text-align: right;
+            color: var(--gray-dark);
+            font-size: 15px;
+            font-style: normal;
+            margin-top: 10px;
         }
 
         /* 文章列表 */
@@ -483,7 +519,8 @@
                 font-size: 20px;
             }
 
-            .about-preview {
+            .about-preview,
+            .quote-preview {
                 padding: 30px 20px;
             }
 
@@ -538,19 +575,42 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>動物と人の関係を、<br>日々の暮らしから考える</h1>
+                <h1>ペットは私たちに何をもたらしてくれたのか？</h1>
                 <div class="hero-message">
                     <p class="lead">
-                        犬のulalaとの生活は、私に多くのことを教えてくれます。<br>
-                        他者との関係、共に生きることの意味、そして愛と責任について。
+                        癒し、喜び、時にはストレス。
                     </p>
                     <p>
-                        このブログでは、日常の小さな気づきから、<br>
-                        動物と人の関係性について深く考えていきます。<br>
-                        哲学的な問いを、やさしい言葉で綴ります。
+                        しかし、それだけではない。<br>
+                        本来、完全なる他者だった彼らが、<br>
+                        私たち自身の在り方を映し出し、<br>
+                        私たちが何者かを教えてくれている。
+                    </p>
+                    <p>
+                        犬のulalaとの暮らしは、私に多くの問いを投げかけてきました。<br>
+                        このブログでは、日常の中に受け取った深い問いに向き合い、<br>
+                        考えたこと、体験したことを綴ります。
                     </p>
                 </div>
                 <a href="#articles" class="cta-button">記事を読む</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 引用区域 - 使用About预览的样式 -->
+    <section class="section dark">
+        <div class="container">
+            <div class="quote-preview">
+                <blockquote>
+                    <p>
+                        「＜アプリボワゼ 飼いならす＞って、それ、なんのことだい？」<br>
+                        「よく忘れられていることだがね。＜仲よくなる＞っていうことさ」
+                    </p>
+                    <p>
+                        「あんたがおれを飼いならすと、おれたちは、もう、おたがいに、はなれちゃいられなくなるよ。あんたは、おれにとって、この世でたったひとりの人になるし、おれは、あんたにとって、かけがいのないものになるんだよ・・・・」
+                    </p>
+                    <cite>——『星の王子さま』</cite>
+                </blockquote>
             </div>
         </div>
     </section>
@@ -559,12 +619,11 @@
     <section class="section light" id="articles">
         <div class="container">
             <div class="section-title">
-                <h2>最近の記事</h2>
-                <p>ulalaとの暮らしから生まれた思考を綴っています</p>
+                <h2>考えたこと、問うたこと</h2>
             </div>
             
             <div class="articles-list">
-                <!-- 示例文章1 - 可以删除或保留作为模板 -->
+                <!-- 示例文章1 -->
                 <article class="article-card">
                     <div class="article-meta">
                         <time datetime="2025-01-15">2025年1月15日</time>
@@ -632,8 +691,8 @@
     <section class="newsletter" id="newsletter">
         <div class="container">
             <div class="newsletter-content">
-                <h2>更新通知を受け取る</h2>
-                <p>新しい記事を公開したら、メールでお知らせします。<br>月に1回程度の配信予定です。</p>
+                <h2>一緒に考えませんか？</h2>
+                <p>新しい記事を公開したら、メールでお知らせします。<br>月に1回程度、ゆっくりと考え、書いていきます。</p>
                 
                 <form class="newsletter-form" id="subscription-form" name="newsletter-subscription" method="POST" data-netlify="true">
                     <input type="hidden" name="form-name" value="newsletter-subscription">

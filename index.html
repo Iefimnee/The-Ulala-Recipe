@@ -405,91 +405,6 @@
             color: var(--light);
         }
 
-        /* Newsletter */
-        .newsletter {
-            background-color: var(--light);
-            padding: 80px 0;
-            border-top: 1px solid var(--border);
-        }
-
-        .newsletter-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .newsletter-content h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: var(--darker);
-        }
-
-        .newsletter-content p {
-            margin-bottom: 30px;
-            color: var(--gray-dark);
-            font-size: 16px;
-        }
-
-        .newsletter-form {
-            display: flex;
-            box-shadow: var(--shadow);
-            border-radius: 4px;
-            overflow: hidden;
-            max-width: 500px;
-            margin: 0 auto;
-            border: 1px solid var(--border);
-        }
-
-        .newsletter-form input {
-            flex-grow: 1;
-            padding: 15px 20px;
-            border: none;
-            border-right: 1px solid var(--gray);
-            font-size: 15px;
-            background-color: var(--light);
-            font-family: var(--font-main);
-        }
-
-        .newsletter-form input:focus {
-            outline: none;
-            background-color: #f9f9f9;
-        }
-
-        .newsletter-form button {
-            padding: 15px 30px;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 15px;
-            transition: background-color 0.3s ease;
-            font-family: var(--font-main);
-        }
-
-        .newsletter-form button:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .thank-you {
-            display: none;
-            text-align: center;
-            background-color: var(--background);
-            padding: 25px;
-            border-radius: 4px;
-            margin-top: 25px;
-        }
-
-        .thank-you h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .thank-you p {
-            color: var(--gray-dark);
-            margin-bottom: 0;
-        }
-
         /* 响应式设计 */
         @media (max-width: 768px) {
             .hero {
@@ -523,20 +438,6 @@
             .about-preview,
             .quote-preview {
                 padding: 30px 20px;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .newsletter-form input,
-            .newsletter-form button {
-                width: 100%;
-            }
-
-            .newsletter-form input {
-                border-right: none;
-                border-bottom: 1px solid var(--gray);
             }
 
             .logo-text {
@@ -620,7 +521,8 @@
     <section class="section light" id="articles">
         <div class="container">
             <div class="section-title">
-                <h2>考えたこと、問うたこと</h2>
+                <h2>最近の記事</h2>
+                <p>Ulalaとの暮らしから生まれた思考を綴っています</p>
             </div>
             
             <div class="articles-list">
@@ -684,27 +586,6 @@
         </div>
     </section>
 
-    <!-- Newsletter注册 -->
-    <section class="newsletter" id="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>一緒に考えませんか？</h2>
-                <p>新しい記事を公開したら、メールでお知らせします。<br>月に1回程度、ゆっくりと考え、書いていきます。</p>
-                
-                <form class="newsletter-form" id="subscription-form" name="newsletter-subscription" method="POST" data-netlify="true">
-                    <input type="hidden" name="form-name" value="newsletter-subscription">
-                    <input type="email" name="email" placeholder="メールアドレスを入力" required>
-                    <button type="submit">登録する</button>
-                </form>
-                
-                <div class="thank-you" id="thank-you">
-                    <h3>ありがとうございます！</h3>
-                    <p>登録が完了しました。新しい記事を公開したらお知らせします。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- 统一页脚 -->
     <footer>
         <div class="container">
@@ -730,43 +611,6 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-N2EZH1TRTK');
-    });
-    </script>
-
-    <!-- 表单提交处理 -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var form = document.getElementById('subscription-form');
-        var thankYou = document.getElementById('thank-you');
-        
-        if(form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var email = form.querySelector('input[type="email"]').value;
-                if(!email || !email.includes('@')) {
-                    alert('有効なメールアドレスを入力してください。');
-                    return;
-                }
-                
-                var formData = new FormData(form);
-                fetch('/', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(function(response) {
-                    if(response.ok) {
-                        form.style.display = 'none';
-                        thankYou.style.display = 'block';
-                    } else {
-                        throw new Error('Network response was not ok.');
-                    }
-                })
-                .catch(function(error) {
-                    console.error('Error:', error);
-                    alert('エラーが発生しました。後でもう一度お試しください。');
-                });
-            });
-        }
     });
     </script>
 

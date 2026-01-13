@@ -9,37 +9,37 @@
     <priority>1.0</priority>
   </url>
   
-  <!-- Product Pages -->
+  <!-- Product Pages - 基于拉科关键词搜索量排序 -->
   <url>
-    <loc>https://ulala.jp/product-royal-canin.html</loc>
+    <loc>https://ulala.jp/product-royal-canin-mini-adult.html</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://ulala.jp/product-acana.html</loc>
+    <loc>https://ulala.jp/product-acana-adult-small-breed.html</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://ulala.jp/product-umaka.html</loc>
+    <loc>https://ulala.jp/product-pochi-wild-salmon.html</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://ulala.jp/product-nutro.html</loc>
+    <loc>https://ulala.jp/product-nutro-natural-choice-small-breed.html</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://ulala.jp/product-konoko.html</loc>
+    <loc>https://ulala.jp/product-k9-lamb-feast.html</loc>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

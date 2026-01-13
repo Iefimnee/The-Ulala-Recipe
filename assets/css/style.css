@@ -1,1340 +1,326 @@
-/* ==============================================
-   Recipe of Ulala - Main Stylesheet
-   主题色: 绿色 #B4CF9E
-   设计理念: 极简、清晰、移动优先
-   ============================================== */
-
-/* ======================
-   1. CSS Variables (全局变量)
-   ====================== */
-:root {
-    /* 主色系 - 绿色 */
-    --primary: #B4CF9E;
-    --primary-light: #D4E7C5;
-    --primary-dark: #8FB87A;
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    /* 文字颜色 */
-    --text-dark: #333333;
-    --text-medium: #666666;
-    --text-light: #999999;
+    <!-- SEO Meta Tags -->
+    <title>Recipe of Ulala - もう、迷わない。ドッグフード選び</title>
+    <meta name="description" content="97%の飼い主さんが迷っているドッグフード選び。成分を理解すれば、答えは見つかります。人気の5商品を詳しく解説。">
+    <meta name="keywords" content="ドッグフード,犬,ペット,成分,選び方,おすすめ,レビュー,評価,ロイヤルカナン,アカナ,ニュートロ,ポチ,K9">
     
-    /* 背景色 */
-    --bg-white: #FFFFFF;
-    --bg-light: #F8F8F8;
-    --bg-green-light: #F5F9F3;
+    <!-- Open Graph -->
+    <meta property="og:title" content="Recipe of Ulala - もう、迷わない。ドッグフード選び">
+    <meta property="og:description" content="成分を理解すれば、答えは見つかります。人気の5商品を詳しく解説。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ulala.jp">
+    <meta property="og:image" content="https://ulala.jp/assets/images/og-image.jpg">
     
-    /* 边框 */
-    --border: #E0E0E0;
-    --border-light: #F0F0F0;
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico">
     
-    /* 功能色 */
-    --success: #4CAF50;
-    --warning: #FF9800;
-    --error: #F44336;
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
     
-    /* 阴影 */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-    --shadow: 0 4px 12px rgba(0,0,0,0.08);
-    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ========== Header ========== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Recipe of Ulala</span>
+                        <span class="logo-subtitle">一匹一匹に、答えを。</span>
+                    </a>
+                </div>
+                
+                <nav class="nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">ホーム</a></li>
+                        <li><a href="#products" class="nav-link">商品一覧</a></li>
+                        <li><a href="contact.html" class="nav-link">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="メニュー">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== Hero Section ========== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                
+                <!-- Decorative Icons -->
+                <div class="hero-icons">
+                    <span class="icon">🥩</span>
+                    <span class="icon">🌾</span>
+                    <span class="icon">🥚</span>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="hero-title">もう、迷わない。</h1>
+                
+                <!-- Description - Desktop Version -->
+                <div class="hero-description hero-text-long">
+                    <p class="hero-stat">97%の飼い主さんが迷っている<br>ドッグフード選び</p>
+                    <p class="hero-message">成分を理解すれば、<br>答えは見つかります</p>
+                </div>
+                
+                <!-- Description - Mobile Version -->
+                <div class="hero-description hero-text-short">
+                    <p class="hero-message">成分を理解すれば、<br>答えは見つかります</p>
+                </div>
+                
+                <!-- Scroll Indicator -->
+                <a href="#products" class="scroll-indicator">
+                    <span>↓ 人気の商品を見る</span>
+                </a>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Products Section ========== -->
+    <section class="products" id="products">
+        <div class="container">
+            
+            <!-- Section Title -->
+            <div class="section-header">
+                <h2 class="section-title">📦 検索数トップ5から厳選</h2>
+                <p class="section-subtitle">最も検索されている人気ブランドを詳しく解説</p>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="product-grid">
+                
+                <!-- Product Card 1: Royal Canin -->
+                <article class="product-card">
+                    <a href="product-royal-canin-mini-adult.html" class="product-link">
+                        <div class="product-image">
+                            <img src="assets/images/products/royal-canin-mini-adult-400.jpg" 
+                                 alt="Royal Canin ミニ アダルト" 
+                                 loading="lazy">
+                        </div>
+                        
+                        <div class="product-info">
+                            <h3 class="product-name">Royal Canin<br>ミニ アダルト</h3>
+                            
+                            <!-- Amazon Rating -->
+                            <div class="product-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="score">4.5</span>
+                                <span class="count">(1,234件)</span>
+                            </div>
+                            
+                            <div class="product-price">¥4,580 <span class="unit">/ 2kg</span></div>
+                            
+                            <div class="product-tags">
+                                <span class="tag">小型犬</span>
+                                <span class="tag">成犬</span>
+                                <span class="tag">検索No.1</span>
+                            </div>
+                            
+                            <div class="product-button">
+                                <span>詳しく見る →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Product Card 2: Acana -->
+                <article class="product-card">
+                    <a href="product-acana-adult-small-breed.html" class="product-link">
+                        <div class="product-image">
+                            <img src="assets/images/products/acana-adult-small-breed-400.jpg" 
+                                 alt="Acana アダルト スモールブリード" 
+                                 loading="lazy">
+                        </div>
+                        
+                        <div class="product-info">
+                            <h3 class="product-name">Acana<br>アダルト スモールブリード</h3>
+                            
+                            <div class="product-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="score">4.7</span>
+                                <span class="count">(1,043件)</span>
+                            </div>
+                            
+                            <div class="product-price">¥6,380 <span class="unit">/ 2kg</span></div>
+                            
+                            <div class="product-tags">
+                                <span class="tag">小型犬</span>
+                                <span class="tag">成犬</span>
+                                <span class="tag">グレインフリー</span>
+                            </div>
+                            
+                            <div class="product-button">
+                                <span>詳しく見る →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Product Card 3: Pochi -->
+                <article class="product-card">
+                    <a href="product-pochi-wild-salmon.html" class="product-link">
+                        <div class="product-image">
+                            <img src="assets/images/products/pochi-wild-salmon-400.jpg" 
+                                 alt="Pochi ベーシック ワイルドサーモン" 
+                                 loading="lazy">
+                        </div>
+                        
+                        <div class="product-info">
+                            <h3 class="product-name">Pochi<br>ベーシック ワイルドサーモン</h3>
+                            
+                            <div class="product-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="score">4.6</span>
+                                <span class="count">(782件)</span>
+                            </div>
+                            
+                            <div class="product-price">¥4,950 <span class="unit">/ 1kg</span></div>
+                            
+                            <div class="product-tags">
+                                <span class="tag">国産</span>
+                                <span class="tag">グレインフリー</span>
+                                <span class="tag">全年齢</span>
+                            </div>
+                            
+                            <div class="product-button">
+                                <span>詳しく見る →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Product Card 4: Nutro -->
+                <article class="product-card">
+                    <a href="product-nutro-natural-choice-small-breed.html" class="product-link">
+                        <div class="product-image">
+                            <img src="assets/images/products/nutro-natural-choice-small-breed-400.jpg" 
+                                 alt="Nutro ナチュラルチョイス 小型犬用" 
+                                 loading="lazy">
+                        </div>
+                        
+                        <div class="product-info">
+                            <h3 class="product-name">Nutro<br>ナチュラルチョイス 小型犬用</h3>
+                            
+                            <div class="product-rating">
+                                <span class="stars">⭐⭐⭐⭐</span>
+                                <span class="score">4.3</span>
+                                <span class="count">(1,567件)</span>
+                            </div>
+                            
+                            <div class="product-price">¥3,980 <span class="unit">/ 3kg</span></div>
+                            
+                            <div class="product-tags">
+                                <span class="tag">小型犬</span>
+                                <span class="tag">成犬</span>
+                                <span class="tag">コスパ◎</span>
+                            </div>
+                            
+                            <div class="product-button">
+                                <span>詳しく見る →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+                <!-- Product Card 5: K9 Natural -->
+                <article class="product-card">
+                    <a href="product-k9-lamb-feast.html" class="product-link">
+                        <div class="product-image">
+                            <img src="assets/images/products/k9-lamb-feast-400.jpg" 
+                                 alt="K9 Natural ラム・フィースト" 
+                                 loading="lazy">
+                        </div>
+                        
+                        <div class="product-info">
+                            <h3 class="product-name">K9 Natural<br>ラム・フィースト</h3>
+                            
+                            <div class="product-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="score">4.8</span>
+                                <span class="count">(543件)</span>
+                            </div>
+                            
+                            <div class="product-price">¥8,800 <span class="unit">/ 1.8kg</span></div>
+                            
+                            <div class="product-tags">
+                                <span class="tag">NZ産</span>
+                                <span class="tag">生食フリーズドライ</span>
+                                <span class="tag">高タンパク</span>
+                            </div>
+                            
+                            <div class="product-button">
+                                <span>詳しく見る →</span>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+                
+            </div>
+            <!-- End Product Grid -->
+            
+        </div>
+    </section>
+
+    <!-- ========== CTA Section ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h3 class="cta-title">まだ迷っていますか？</h3>
+                <p class="cta-text">各フードの成分を詳しく解説しています</p>
+                <a href="#products" class="cta-button">もう一度商品を見る</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">Recipe of Ulala</div>
+                    <p class="footer-tagline">一匹一匹に、答えを。</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="privacy.html">プライバシーポリシー</a>
+                    <a href="contact.html">お問い合わせ</a>
+                </div>
+                
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Recipe of Ulala. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== Scripts ========== -->
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/script.js"></script>
     
-    /* 字体 */
-    --font-main: 'M PLUS Rounded 1c', sans-serif;
-    --font-serif: 'Noto Serif JP', serif;
-    
-    /* 字体大小 */
-    --text-xs: 12px;
-    --text-sm: 14px;
-    --text-base: 16px;
-    --text-lg: 18px;
-    --text-xl: 24px;
-    --text-2xl: 32px;
-    --text-3xl: 40px;
-    
-    /* 间距 */
-    --spacing-xs: 8px;
-    --spacing-sm: 12px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    --spacing-2xl: 48px;
-    
-    /* 容器宽度 */
-    --container-max: 1200px;
-}
-
-/* ======================
-   2. Reset & Base Styles (基础样式)
-   ====================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: var(--font-main);
-    font-size: var(--text-base);
-    line-height: 1.7;
-    color: var(--text-dark);
-    background-color: var(--bg-white);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 var(--spacing-lg);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-}
-
-ul {
-    list-style: none;
-}
-
-button {
-    font-family: inherit;
-    cursor: pointer;
-    border: none;
-    background: none;
-}
-
-/* ======================
-   3. Header (页眉)
-   ====================== */
-.header {
-    background-color: var(--bg-white);
-    border-bottom: 1px solid var(--border-light);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-sm);
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-md) 0;
-}
-
-.logo a {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-text {
-    font-size: var(--text-lg);
-    font-weight: 700;
-    color: var(--text-dark);
-}
-
-.logo-subtitle {
-    font-size: var(--text-sm);
-    color: var(--text-medium);
-    margin-top: 2px;
-}
-
-.nav-list {
-    display: flex;
-    gap: var(--spacing-xl);
-}
-
-.nav-link {
-    font-size: var(--text-base);
-    color: var(--text-medium);
-    font-weight: 500;
-    padding: var(--spacing-xs) 0;
-    position: relative;
-}
-
-.nav-link:hover {
-    color: var(--primary-dark);
-}
-
-.nav-link.active {
-    color: var(--primary-dark);
-    font-weight: 600;
-}
-
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary);
-}
-
-/* Mobile Menu Toggle */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    padding: var(--spacing-xs);
-}
-
-.menu-toggle span {
-    width: 24px;
-    height: 2px;
-    background-color: var(--text-dark);
-    transition: all 0.3s ease;
-}
-
-/* ======================
-   4. Hero Section (英雄区)
-   ====================== */
-.hero {
-    background: linear-gradient(135deg, var(--bg-green-light) 0%, var(--bg-white) 100%);
-    padding: var(--spacing-2xl) 0;
-    text-align: center;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.hero-icons {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    font-size: 40px;
-}
-
-.hero-title {
-    font-size: var(--text-3xl);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.3;
-}
-
-.hero-stat {
-    font-size: var(--text-xl);
-    color: var(--primary-dark);
-    font-weight: 600;
-    margin-bottom: var(--spacing-md);
-    line-height: 1.5;
-}
-
-.hero-message {
-    font-size: var(--text-lg);
-    color: var(--text-medium);
-    margin-bottom: var(--spacing-xl);
-    line-height: 1.8;
-}
-
-/* Desktop/Mobile Text Toggle */
-.hero-text-short {
-    display: none;
-}
-
-.scroll-indicator {
-    display: inline-block;
-    margin-top: var(--spacing-lg);
-    color: var(--primary-dark);
-    font-weight: 500;
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border: 2px solid var(--primary);
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.scroll-indicator:hover {
-    background-color: var(--primary);
-    color: var(--bg-white);
-    transform: translateY(-2px);
-}
-
-/* ======================
-   5. Products Section (产品区)
-   ====================== */
-.products {
-    padding: var(--spacing-2xl) 0;
-    background-color: var(--bg-white);
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.section-title {
-    font-size: var(--text-2xl);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-}
-
-.section-subtitle {
-    font-size: var(--text-base);
-    color: var(--text-medium);
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-xl);
-}
-
-/* Product Card */
-.product-card {
-    background-color: var(--bg-white);
-    border: 1px solid var(--border-light);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-sm);
-}
-
-.product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
-    border-color: var(--primary-light);
-}
-
-.product-link {
-    display: block;
-}
-
-.product-image {
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: var(--bg-light);
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.05);
-}
-
-.product-info {
-    padding: var(--spacing-lg);
-}
-
-.product-name {
-    font-size: var(--text-lg);
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-    line-height: 1.4;
-}
-
-.product-rating {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-sm);
-    font-size: var(--text-sm);
-}
-
-.stars {
-    color: #FFB800;
-}
-
-.score {
-    font-weight: 600;
-    color: var(--text-dark);
-}
-
-.count {
-    color: var(--text-light);
-}
-
-.product-price {
-    font-size: var(--text-xl);
-    font-weight: 700;
-    color: var(--primary-dark);
-    margin-bottom: var(--spacing-md);
-}
-
-.product-price .unit {
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--text-medium);
-}
-
-.product-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
-}
-
-.tag {
-    font-size: var(--text-xs);
-    padding: 4px 10px;
-    background-color: var(--primary-light);
-    color: var(--primary-dark);
-    border-radius: 20px;
-    font-weight: 500;
-}
-
-.product-button {
-    text-align: center;
-    padding: var(--spacing-sm) 0;
-    color: var(--primary-dark);
-    font-weight: 600;
-    border-top: 1px solid var(--border-light);
-    margin-top: var(--spacing-md);
-}
-
-.product-card:hover .product-button {
-    color: var(--primary);
-}
-
-/* ======================
-   6. CTA Section
-   ====================== */
-.cta-section {
-    padding: var(--spacing-2xl) 0;
-    background-color: var(--bg-green-light);
-    text-align: center;
-}
-
-.cta-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.cta-title {
-    font-size: var(--text-2xl);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-}
-
-.cta-text {
-    font-size: var(--text-base);
-    color: var(--text-medium);
-    margin-bottom: var(--spacing-lg);
-}
-
-.cta-button {
-    display: inline-block;
-    padding: var(--spacing-md) var(--spacing-xl);
-    background-color: var(--primary);
-    color: var(--bg-white);
-    font-weight: 600;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-}
-
-/* ======================
-   7. Footer (页脚)
-   ====================== */
-.footer {
-    background-color: var(--text-dark);
-    color: var(--bg-white);
-    padding: var(--spacing-xl) 0 var(--spacing-lg);
-}
-
-.footer-content {
-    text-align: center;
-}
-
-.footer-brand {
-    margin-bottom: var(--spacing-lg);
-}
-
-.footer-logo {
-    font-size: var(--text-xl);
-    font-weight: 700;
-    margin-bottom: var(--spacing-xs);
-}
-
-.footer-tagline {
-    font-size: var(--text-sm);
-    color: var(--primary-light);
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-lg);
-}
-
-.footer-links a {
-    color: var(--bg-white);
-    font-size: var(--text-sm);
-    opacity: 0.8;
-}
-
-.footer-links a:hover {
-    opacity: 1;
-    color: var(--primary-light);
-}
-
-.footer-copyright {
-    font-size: var(--text-xs);
-    color: var(--text-light);
-    padding-top: var(--spacing-md);
-    border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-/* ======================
-   8. Product Detail Page (产品详情页)
-   ====================== */
-
-/* Breadcrumb */
-.breadcrumb {
-    background-color: var(--bg-light);
-    padding: var(--spacing-md) 0;
-    font-size: var(--text-sm);
-}
-
-.breadcrumb a {
-    color: var(--text-medium);
-}
-
-.breadcrumb a:hover {
-    color: var(--primary-dark);
-}
-
-.separator {
-    margin: 0 var(--spacing-xs);
-    color: var(--text-light);
-}
-
-.current {
-    color: var(--text-dark);
-    font-weight: 500;
-}
-
-/* Product Detail Main */
-.product-detail {
-    padding: var(--spacing-2xl) 0;
-}
-
-/* Product Overview */
-.product-overview {
-    margin-bottom: var(--spacing-2xl);
-}
-
-.product-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-2xl);
-    align-items: start;
-}
-
-.product-image-large {
-    width: 100%;
-    aspect-ratio: 1;
-    background-color: var(--bg-light);
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.product-image-large img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.product-basic-info {
-    /* Grid will handle layout */
-}
-
-.product-title {
-    font-size: var(--text-2xl);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.3;
-}
-
-.product-price-large {
-    font-size: var(--text-3xl);
-    font-weight: 700;
-    color: var(--primary-dark);
-    margin: var(--spacing-md) 0;
-}
-
-.product-tags-large {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-sm);
-    margin: var(--spacing-lg) 0;
-}
-
-.product-highlights {
-    background-color: var(--bg-green-light);
-    padding: var(--spacing-lg);
-    border-radius: 8px;
-    margin-top: var(--spacing-lg);
-}
-
-.product-highlights h3 {
-    font-size: var(--text-lg);
-    margin-bottom: var(--spacing-md);
-    color: var(--text-dark);
-}
-
-.product-highlights ul {
-    list-style: none;
-}
-
-.product-highlights li {
-    padding: var(--spacing-xs) 0;
-    color: var(--text-medium);
-    line-height: 1.6;
-}
-
-/* Section Titles */
-.section-title-small {
-    font-size: var(--text-xl);
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-sm);
-}
-
-.section-subtitle-small {
-    font-size: var(--text-sm);
-    color: var(--text-medium);
-    margin-bottom: var(--spacing-lg);
-}
-
-/* Suitability Check (自测功能) */
-.suitability-check {
-    background-color: var(--bg-light);
-    padding: var(--spacing-xl);
-    border-radius: 12px;
-    margin-bottom: var(--spacing-2xl);
-}
-
-.checkbox-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-}
-
-.checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    padding: var(--spacing-md);
-    background-color: var(--bg-white);
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.checkbox-item:hover {
-    border-color: var(--primary);
-}
-
-.checkbox-item input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    accent-color: var(--primary);
-}
-
-.checkbox-item input[type="checkbox"]:checked + .checkbox-label {
-    font-weight: 600;
-    color: var(--primary-dark);
-}
-
-.checkbox-label {
-    font-size: var(--text-base);
-    color: var(--text-dark);
-    cursor: pointer;
-}
-
-.check-button {
-    display: block;
-    width: 100%;
-    padding: var(--spacing-md);
-    background-color: var(--primary);
-    color: var(--bg-white);
-    font-weight: 600;
-    font-size: var(--text-base);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.check-button:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-}
-
-.check-result {
-    margin-top: var(--spacing-lg);
-    padding: var(--spacing-lg);
-    border-radius: 8px;
-    font-weight: 500;
-}
-
-.check-result.match {
-    background-color: #E8F5E9;
-    border: 2px solid var(--success);
-    color: var(--success);
-}
-
-.check-result.partial {
-    background-color: #FFF3E0;
-    border: 2px solid var(--warning);
-    color: #E65100;
-}
-
-.check-result.no-match {
-    background-color: #FFEBEE;
-    border: 2px solid var(--error);
-    color: var(--error);
-}
-
-/* Ingredients Section (成分区) */
-.ingredients-section {
-    margin-bottom: var(--spacing-2xl);
-}
-
-.ingredients-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.ingredient-item {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.ingredient-item:hover {
-    border-color: var(--primary);
-    box-shadow: var(--shadow-sm);
-}
-
-.ingredient-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    background-color: var(--bg-white);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.ingredient-header:hover {
-    background-color: var(--bg-light);
-}
-
-.ingredient-name-rating {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    flex-wrap: wrap;
-}
-
-.ingredient-name {
-    font-weight: 600;
-    color: var(--text-dark);
-    font-size: var(--text-base);
-}
-
-.ingredient-rating {
-    color: #FFB800;
-    font-size: var(--text-sm);
-}
-
-.ingredient-badge {
-    font-size: var(--text-xs);
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-weight: 500;
-}
-
-.ingredient-badge.good {
-    background-color: #E8F5E9;
-    color: var(--success);
-}
-
-.ingredient-badge.excellent {
-    background-color: #E3F2FD;
-    color: #1976D2;
-}
-
-.ingredient-badge.caution {
-    background-color: #FFF3E0;
-    color: #E65100;
-}
-
-.toggle-icon {
-    font-size: var(--text-lg);
-    color: var(--text-medium);
-    transition: transform 0.3s ease;
-}
-
-.ingredient-item.active .toggle-icon {
-    transform: rotate(180deg);
-}
-
-.ingredient-detail {
-    padding: var(--spacing-lg);
-    background-color: var(--bg-green-light);
-    border-top: 1px solid var(--border-light);
-}
-
-.ingredient-explanation h4 {
-    font-size: var(--text-base);
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-dark);
-}
-
-.ingredient-explanation p {
-    color: var(--text-medium);
-    line-height: 1.7;
-    margin-bottom: var(--spacing-md);
-}
-
-.ingredient-pros-cons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-md);
-}
-
-.pros, .cons {
-    /* Grid will handle layout */
-}
-
-.pros h5 {
-    font-size: var(--text-sm);
-    margin-bottom: var(--spacing-sm);
-    color: var(--success);
-}
-
-.cons h5 {
-    font-size: var(--text-sm);
-    margin-bottom: var(--spacing-sm);
-    color: var(--warning);
-}
-
-.pros ul, .cons ul {
-    list-style: disc;
-    padding-left: var(--spacing-lg);
-}
-
-.pros li, .cons li {
-    font-size: var(--text-sm);
-    color: var(--text-medium);
-    padding: 4px 0;
-}
-
-.related-products {
-    margin-top: var(--spacing-lg);
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid var(--border-light);
-}
-
-.related-products h5 {
-    font-size: var(--text-sm);
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-dark);
-}
-
-.related-product-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-}
-
-.related-chip {
-    display: inline-block;
-    padding: 6px 14px;
-    background-color: var(--bg-white);
-    border: 1px solid var(--primary);
-    color: var(--primary-dark);
-    border-radius: 20px;
-    font-size: var(--text-sm);
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.related-chip:hover {
-    background-color: var(--primary);
-    color: var(--bg-white);
-}
-
-.related-chip-note {
-    font-size: var(--text-xs);
-    color: var(--text-medium);
-    padding: 6px 0;
-}
-
-/* Nutrition Section (营养成分) */
-.nutrition-section {
-    margin-bottom: var(--spacing-2xl);
-}
-
-.nutrition-table {
-    background-color: var(--bg-white);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.nutrition-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: var(--spacing-md) var(--spacing-lg);
-    border-bottom: 1px solid var(--border-light);
-}
-
-.nutrition-row:last-child {
-    border-bottom: none;
-}
-
-.nutrition-row.highlight {
-    background-color: var(--bg-green-light);
-    font-weight: 600;
-}
-
-.nutrition-label {
-    color: var(--text-medium);
-}
-
-.nutrition-value {
-    color: var(--text-dark);
-    font-weight: 600;
-    text-align: right;
-}
-
-/* Recommendations Section (推荐/注意) */
-.recommendations-section {
-    margin-bottom: var(--spacing-2xl);
-}
-
-.recommendation-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-}
-
-.recommendation-box {
-    padding: var(--spacing-lg);
-    border-radius: 8px;
-    border: 2px solid;
-}
-
-.recommendation-box.good {
-    background-color: #E8F5E9;
-    border-color: var(--success);
-}
-
-.recommendation-box.caution {
-    background-color: #FFF3E0;
-    border-color: var(--warning);
-}
-
-.recommendation-box h3 {
-    font-size: var(--text-lg);
-    margin-bottom: var(--spacing-md);
-}
-
-.recommendation-box.good h3 {
-    color: var(--success);
-}
-
-.recommendation-box.caution h3 {
-    color: #E65100;
-}
-
-.recommendation-box ul {
-    list-style: none;
-}
-
-.recommendation-box li {
-    padding: var(--spacing-xs) 0;
-    padding-left: var(--spacing-lg);
-    position: relative;
-    color: var(--text-medium);
-}
-
-.recommendation-box li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    font-weight: 700;
-}
-
-.recommendation-box.good li::before {
-    color: var(--success);
-}
-
-.recommendation-box.caution li::before {
-    color: var(--warning);
-}
-
-/* FAQ Section */
-.faq-section {
-    margin-bottom: var(--spacing-2xl);
-}
-
-.faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.faq-item {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.faq-question {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-md) var(--spacing-lg);
-    background-color: var(--bg-white);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.faq-question:hover {
-    background-color: var(--bg-light);
-}
-
-.faq-q-text {
-    font-weight: 600;
-    color: var(--text-dark);
-    flex: 1;
-}
-
-.faq-toggle {
-    font-size: var(--text-lg);
-    color: var(--text-medium);
-    transition: transform 0.3s ease;
-}
-
-.faq-item.active .faq-toggle {
-    transform: rotate(180deg);
-}
-
-.faq-answer {
-    padding: var(--spacing-lg);
-    background-color: var(--bg-green-light);
-    border-top: 1px solid var(--border-light);
-}
-
-.faq-answer p {
-    color: var(--text-medium);
-    line-height: 1.7;
-}
-
-/* Similar Products Section (相似产品) */
-.similar-products-section {
-    margin-bottom: var(--spacing-2xl);
-}
-
-.similar-products-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-}
-
-.similar-product-card {
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.similar-product-card:hover {
-    border-color: var(--primary);
-    box-shadow: var(--shadow);
-    transform: translateY(-2px);
-}
-
-.similar-product-link {
-    display: block;
-    padding: var(--spacing-lg);
-}
-
-.similar-product-header h4 {
-    font-size: var(--text-lg);
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: var(--spacing-md);
-}
-
-.similarity-bar {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
-}
-
-.similarity-label {
-    font-size: var(--text-sm);
-    color: var(--text-medium);
-    white-space: nowrap;
-}
-
-.similarity-progress {
-    flex: 1;
-    height: 8px;
-    background-color: var(--border-light);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.similarity-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary-light), var(--primary));
-    transition: width 0.3s ease;
-}
-
-.similarity-percent {
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--primary-dark);
-}
-
-.similar-product-matches {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    margin-bottom: var(--spacing-md);
-}
-
-.match-badge {
-    font-size: var(--text-xs);
-    padding: 4px 10px;
-    background-color: var(--primary-light);
-    color: var(--primary-dark);
-    border-radius: 20px;
-}
-
-.similar-product-cta {
-    color: var(--primary-dark);
-    font-weight: 600;
-    padding-top: var(--spacing-md);
-    border-top: 1px solid var(--border-light);
-}
-
-.similar-product-card:hover .similar-product-cta {
-    color: var(--primary);
-}
-
-/* Back to Products */
-.back-to-products {
-    text-align: center;
-    margin-top: var(--spacing-2xl);
-}
-
-.back-button {
-    display: inline-block;
-    padding: var(--spacing-md) var(--spacing-xl);
-    border: 2px solid var(--primary);
-    color: var(--primary-dark);
-    font-weight: 600;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: var(--primary);
-    color: var(--bg-white);
-}
-
-/* ======================
-   9. Utility Classes (工具类)
-   ====================== */
-.text-center {
-    text-align: center;
-}
-
-.mt-sm { margin-top: var(--spacing-sm); }
-.mt-md { margin-top: var(--spacing-md); }
-.mt-lg { margin-top: var(--spacing-lg); }
-.mt-xl { margin-top: var(--spacing-xl); }
-
-.mb-sm { margin-bottom: var(--spacing-sm); }
-.mb-md { margin-bottom: var(--spacing-md); }
-.mb-lg { margin-bottom: var(--spacing-lg); }
-.mb-xl { margin-bottom: var(--spacing-xl); }
-
-/* ======================
-   10. Responsive Design (响应式)
-   ====================== */
-
-/* Tablet (768px - 1023px) */
-@media (max-width: 1023px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .product-main {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
-    }
-    
-    .ingredient-pros-cons {
-        grid-template-columns: 1fr;
-    }
-    
-    .recommendation-columns {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Mobile (< 768px) */
-@media (max-width: 767px) {
-    :root {
-        --text-3xl: 32px;
-        --text-2xl: 28px;
-        --text-xl: 20px;
-        --text-lg: 18px;
-    }
-    
-    .container {
-        padding: 0 var(--spacing-md);
-    }
-    
-    /* Header */
-    .nav {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: var(--bg-white);
-        border-top: 1px solid var(--border-light);
-        box-shadow: var(--shadow);
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: all 0.3s ease;
-        z-index: 99;
-    }
-    
-    .nav.active {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        padding: var(--spacing-lg);
-        gap: 0;
-    }
-    
-    .nav-link {
-        display: block;
-        padding: var(--spacing-md) 0;
-        border-bottom: 1px solid var(--border-light);
-    }
-    
-    .nav-link:last-child {
-        border-bottom: none;
-    }
-    
-    .menu-toggle {
-        display: flex;
-    }
-    
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-    
-    /* Hero */
-    .hero {
-        padding: var(--spacing-xl) 0;
-        min-height: 50vh;
-    }
-    
-    .hero-icons {
-        font-size: 32px;
-        gap: var(--spacing-md);
-    }
-    
-    .hero-text-long {
-        display: none;
-    }
-    
-    .hero-text-short {
-        display: block;
-    }
-    
-    /* Products */
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .checkbox-group {
-        grid-template-columns: 1fr;
-    }
-    
-    .similar-products-list {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Font Sizes */
-    .hero-title {
-        font-size: var(--text-2xl);
-    }
-    
-    .section-title {
-        font-size: var(--text-xl);
-    }
-}
-
-/* Very Small Mobile (< 375px) */
-@media (max-width: 374px) {
-    :root {
-        --text-2xl: 24px;
-        --text-xl: 18px;
-    }
-    
-    .hero-icons {
-        font-size: 28px;
-    }
-}
+    <!-- Google Analytics (replace with your GA4 ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+</body>
+</html>
